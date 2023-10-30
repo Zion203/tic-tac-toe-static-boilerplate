@@ -36,11 +36,11 @@ function checker(matrix){
             win.innerText="Player '"+matrix[0][j]+"' wins"
             temp.style.visibility="visible"
 
-        }else if (matrix[0][0]==matrix[1][1] && matrix[1][j]==matrix[2][2]){
+        }else if (matrix[0][0]==matrix[1][1] && matrix[1][1]==matrix[2][2]){
             win.innerText="Player '"+matrix[0][0]+"' wins"
             temp.style.visibility="visible"
 
-        }else if(matrix[0][2]==matrix[1][1] && matrix[1][j]==matrix[2][0]){
+        }else if(matrix[0][2]==matrix[1][1] && matrix[1][1]==matrix[2][0]){
             win.innerText="Player '"+matrix[2][0]+"' wins" 
             temp.style.visibility="visible"
 
