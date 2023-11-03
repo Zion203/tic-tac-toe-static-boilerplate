@@ -4,7 +4,7 @@ var win = document.getElementById("win")
 var temp = document.getElementById("temp")
 var Matrix = [[1,2,3],[4,5,6],[7,8,9]]
 var button = document.getElementById("again")
-
+var click=0
 function Update(a){
     toggle=!toggle
     if (toggle){
@@ -44,6 +44,9 @@ function checker(matrix){
             win.innerText="Player '"+matrix[2][0]+"' wins" 
             temp.style.visibility="visible"
 
+        }else if (click==9){
+            win.innerText="The Match is Tied" 
+            temp.style.visibility="visible"
         }
     }
     
@@ -54,6 +57,7 @@ for (let i =0 ; i<boxs.length;i++){
         if (boxs[i].innerText=="X" || boxs[i].innerText=="O" ){
             undefined
         }else{
+            click++
             let temp=Update(boxs[i])
             let list=appender(i,temp)
             checker(list)
